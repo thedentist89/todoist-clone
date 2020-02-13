@@ -8,35 +8,33 @@
 }
 
 @mixin vertical-align($va-align: center) {
-    display: flex;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 
-    @if $va-align != center {
-        -webkit-box-pack: left;
-            -ms-flex-pack: left;
-                justify-content: left;
-    } @else {
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
+  @if $va-align != center {
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+  } @else {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 @mixin no-select {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
 
 @mixin btn($width) {
   width: $width;
@@ -59,10 +57,10 @@
 }
 
 @mixin cancel() {
-    color: #555;
-    cursor: pointer;
-    font-size: 14px;
-    margin: 2px 5px;
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 2px 5px;
 }
 
 @mixin transparent-button() {

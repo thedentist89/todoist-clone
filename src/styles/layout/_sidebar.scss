@@ -9,7 +9,7 @@
   border-right: var(--generic-border);
   background-color: var(--color-off-white);
 
-  @include mq('900px') {
+  @include mq("900px") {
     display: none;
   }
 
@@ -26,13 +26,13 @@
       padding: 5px 0;
       padding-left: 10px;
       padding-right: 15px;
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      // width: 100%;
+      // display: -webkit-box;
+      // display: -ms-flexbox;
+      // display: flex;
       -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
     }
 
     &-delete {
@@ -44,7 +44,8 @@
       }
     }
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
       font-weight: bold;
       background-color: white;
     }
@@ -81,7 +82,7 @@
   }
 
   &__project {
-    @include vertical-align('left');
+    @include vertical-align("left");
   }
 
   &__dot {
@@ -105,7 +106,7 @@
 
       svg.hidden-projects {
         -webkit-transform: rotate(-90deg);
-                transform: rotate(-90deg);
+        transform: rotate(-90deg);
       }
     }
 
@@ -126,7 +127,7 @@
       display: -ms-flexbox;
       display: flex;
       cursor: pointer;
-      line-height: 1.50;
+      line-height: 1.5;
       font-size: 15px;
       padding-left: 0;
       padding-right: 0;
@@ -144,8 +145,8 @@
           display: -ms-flexbox;
           display: flex;
           -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
 
           svg {
             width: 18px;
@@ -155,7 +156,8 @@
         }
       }
 
-      &.active, &:hover {
+      &.active,
+      &:hover {
         font-weight: bold;
         background-color: white;
       }
