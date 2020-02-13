@@ -7,7 +7,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: var(--generic-border);
-  background-color: #fafafa;
+  background-color: var(--color-off-white);
 
   @include mq('900px') {
     display: none;
@@ -15,9 +15,7 @@
 
   li {
     &:hover .sidebar__project-delete {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      display: block;
     }
   }
 
