@@ -1,3 +1,17 @@
 @import "variables/variables";
 @import "base/base";
 @import "mixins/mixins";
+
+
+@import "layout/header";
+@import "layout/sidebar";
+
+
+@import "components/darkmode";
+@import "components/add-project";
+@import "components/add-task";
+@import "components/content";
+@import "components/delete-modal";
+@import "components/project-overlay";
+@import "components/task-date";
+@import "components/tasks";

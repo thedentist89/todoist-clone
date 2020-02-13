@@ -7,17 +7,25 @@
   border-radius: 3px;
 }
 
-@mixin vertical-align($va-al: center) {
+@mixin vertical-align($va-align: center) {
     display: flex;
     align-items: center;
-    justify-content: $va-al;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
-
-    // @if $va-al != center {
-    //     justify-content: left;
-    // } @else {
-    //     justify-content: center;
-    // }
+    @if $va-align != center {
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
+    } @else {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
 }
 
 @mixin no-select {
@@ -48,4 +56,42 @@
   text-decoration: none !important;
   text-align: center;
   cursor: pointer;
+}
+
+@mixin cancel() {
+    color: #555;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 2px 5px;
+}
+
+@mixin transparent-button() {
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin task-item() {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 18px;
+  color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  list-style-type: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+}
+
+@mixin mq($from) {
+  @media (max-width: $from) {
+    @content;
+  }
 }
