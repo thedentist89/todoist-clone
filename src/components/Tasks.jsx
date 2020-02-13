@@ -3,7 +3,7 @@ import Checkbox from "./Checkbox";
 import { useTasks } from "../hooks";
 
 const Tasks = () => {
-  const { tasks } = useTasks();
+  const { tasks } = useTasks("1");
 
   let projectName = "";
 
